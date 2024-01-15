@@ -256,7 +256,7 @@ PrefabInstance:
     - target: {fileID: 732877344778758184, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: DemoScene
+      value: Copie
       objectReference: {fileID: 0}
     - target: {fileID: 732877344778758184, guid: fd28f23af44f73f4a95e33435872ad15,
         type: 3}
