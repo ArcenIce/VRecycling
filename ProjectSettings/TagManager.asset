@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - TrashCan
-  - BlueTrash
+  - GreenTrash
+  - YellowTrash
+  - BlackTrash
   layers:
   - Default
   - TransparentFX
