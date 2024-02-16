@@ -10,6 +10,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
     /// </summary>
     public class DynamicMoveProvider : ActionBasedContinuousMoveProvider
     {
+        public AudioSource walkStone;
         /// <summary>
         /// Defines which transform the XR Origin's movement direction is relative to.
         /// </summary>
@@ -108,6 +109,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             m_CombinedTransform.localRotation = Quaternion.identity;
 
             forwardSource = m_CombinedTransform;
+
+            // walkStone.Play();
         }
 
         /// <inheritdoc />
@@ -115,6 +118,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         {
             // Don't need to do anything if the total input is zero.
             // This is the same check as the base method.
+            // walkStone.Play();
             if (input == Vector2.zero)
                 return Vector3.zero;
 
@@ -182,7 +186,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             var combinedPosition = Vector3.Lerp(m_RightMovementPose.position, m_LeftMovementPose.position, leftHandBlend);
             var combinedRotation = Quaternion.Slerp(m_RightMovementPose.rotation, m_LeftMovementPose.rotation, leftHandBlend);
             m_CombinedTransform.SetPositionAndRotation(combinedPosition, combinedRotation);
-
+            // walkStone.Play();
             return base.ComputeDesiredMove(input);
         }
     }

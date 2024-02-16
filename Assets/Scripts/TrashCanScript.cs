@@ -12,6 +12,11 @@ public class BlackTrashCanCollision : MonoBehaviour
 
     public Text scoreText;
 
+    public AudioSource SuccessSound;
+    public AudioSource ErrorSound;
+
+    public AudioSource FlyingTrashSound;
+
     void Start()
     {   
         Debug.Log("BlackTrashCanCollision");
@@ -35,6 +40,7 @@ public class BlackTrashCanCollision : MonoBehaviour
             main.startColor = Color.white;
             Destroy(collision.gameObject);
             particle.Play();
+            FlyingTrashSound.Play();
             return;
         }
         //Check for a match with the specified name on any GameObject that collides with your GameObject
@@ -48,6 +54,7 @@ public class BlackTrashCanCollision : MonoBehaviour
                 main.startColor = Color.green;
                 scoreText.text = "+1";
                 scoreText.color = Color.green;
+                SuccessSound.Play();
 
             }
         }
@@ -56,6 +63,7 @@ public class BlackTrashCanCollision : MonoBehaviour
             main.startColor = Color.red;
             scoreText.text = "-1";
             scoreText.color = Color.red;
+            ErrorSound.Play();
         }
         // scoreText.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         scoreText.enabled = true;
