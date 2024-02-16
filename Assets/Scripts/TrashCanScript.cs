@@ -30,6 +30,13 @@ public class BlackTrashCanCollision : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         ParticleSystem.MainModule main = particle.main;
+        if (collision.gameObject.tag == "Untagged")
+        {
+            main.startColor = Color.white;
+            Destroy(collision.gameObject);
+            particle.Play();
+            return;
+        }
         //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.tag == tag)
         {
@@ -46,26 +53,18 @@ public class BlackTrashCanCollision : MonoBehaviour
         }
         else
         {
-            scoreValue.score -= 1;
             main.startColor = Color.red;
             scoreText.text = "-1";
             scoreText.color = Color.red;
         }
         // scoreText.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         scoreText.enabled = true;
-        scoreValue.actuel += 1;
         particle.Play();
         Destroy(collision.gameObject);
 
         // Attendre 1 seconde avant de désactiver le texte
         StartCoroutine(AnimateScoreText());
 
-    }
-
-    private IEnumerator DisableScoreText()
-    {
-        yield return new WaitForSeconds(1);
-        scoreText.enabled = false;
     }
 
     private IEnumerator AnimateScoreText()
