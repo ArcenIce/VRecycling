@@ -1,14 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-#if UNITY_EDITOR
-using UnityEditor;
-
-#endif
-using UnityEngine.Events;
 
 
 public class ScoreValue : MonoBehaviour
@@ -18,20 +9,22 @@ public class ScoreValue : MonoBehaviour
     public Text Valuetext;
 
     // Progress bar
-    public int actuel = 0;
-    public int max = 40;
+    private int actuel = 0;
     public Image ProgressImage;
     public Text ProgressText;
+    public GameObject Interactables;
+    private int max;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        max = Interactables.transform.childCount;
     }
 
     // Update is called once per frame
     void Update()
     {
+        actuel = max - Interactables.transform.childCount;
         float Progress = actuel == 0 ? 0 : (float)actuel / (float)max;
         ProgressImage.fillAmount = Progress;
         Valuetext.text = "Score : " + score.ToString();
