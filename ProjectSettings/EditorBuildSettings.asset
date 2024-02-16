@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Samples/XR Interaction Toolkit/2.5.2/Starter Assets/DemoScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
   - enabled: 1
-    path: Assets/Scenes/Copie.unity
+    path: Assets/Scenes/Main.unity
     guid: 86fa2117caca953489b4037e8f92936a
   - enabled: 1
     path: Assets/Scenes/Menu.unity
