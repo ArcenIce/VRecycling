@@ -17,6 +17,8 @@ public class ProgressBar : MonoBehaviour
     [SerializeField]
     private UnityEvent OnCompleted;
 
+    private float progression;
+
     private Coroutine AnimationCoroutine;
 
     private void Start()
@@ -38,6 +40,7 @@ public class ProgressBar : MonoBehaviour
 
     public void SetProgress(float Progress, float Speed)
     {
+        progression = Progress;
         if (Progress < 0 || Progress > 1)
         {
             Debug.LogWarning($"Invalid progress passed, expected value is between 0 and 1, got {Progress}. Clamping.");
@@ -52,6 +55,11 @@ public class ProgressBar : MonoBehaviour
 
             AnimationCoroutine = StartCoroutine(AnimateProgress(Progress, Speed));
         }
+    }
+
+    public float GetProgress()
+    {
+        return progression;
     }
 
     private IEnumerator AnimateProgress(float Progress, float Speed)
