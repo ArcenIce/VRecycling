@@ -19,11 +19,8 @@ public class BlackTrashCanCollision : MonoBehaviour
 
     void Start()
     {   
-        Debug.Log("BlackTrashCanCollision");
-        // Tente de trouver le composant ScoreValue dans la scène au démarrage
         scoreValue = FindObjectOfType<ScoreValue>();
 
-        // Log une erreur si ScoreValue n'est pas trouvé pour s'assurer que le problème est clair
         if (scoreValue == null)
         {
             Debug.LogError("Impossible de trouver un composant ScoreValue dans la scène.");
@@ -31,7 +28,6 @@ public class BlackTrashCanCollision : MonoBehaviour
         scoreText.enabled = false;
     }
 
-    //Detect collisions between the GameObjects with Colliders attached
     void OnCollisionEnter(Collision collision)
     {
         ParticleSystem.MainModule main = particle.main;
@@ -43,11 +39,9 @@ public class BlackTrashCanCollision : MonoBehaviour
             FlyingTrashSound.Play();
             return;
         }
-        //Check for a match with the specified name on any GameObject that collides with your GameObject
         if (collision.gameObject.tag == tag)
         {
-            //If the GameObject's name matches the one you suggest, output this message in the console
-            if (scoreValue != null) // Assurez-vous que scoreValue n'est pas null avant d'accéder à score
+            if (scoreValue != null)
             {
                 scoreValue.score += 1;
                 
