@@ -4370,6 +4370,7 @@ GameObject:
   - component: {fileID: 200418067}
   - component: {fileID: 200418066}
   - component: {fileID: 200418065}
+  - component: {fileID: 200418069}
   m_Layer: 0
   m_Name: StoneWalk
   m_TagString: Untagged
@@ -4407,7 +4408,7 @@ AudioSource:
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -4448,7 +4449,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.233
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4559,6 +4560,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200418062}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &200418069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200418062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e8fdbfbf044584da54e06fb183e647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &210127848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15804,7 +15817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e8fdbfbf044584da54e06fb183e647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
 --- !u!1 &529245647
 GameObject:
   m_ObjectHideFlags: 0
@@ -19766,7 +19778,7 @@ GameObject:
   - component: {fileID: 740277071}
   - component: {fileID: 740277070}
   - component: {fileID: 740277069}
-  - component: {fileID: 740277068}
+  - component: {fileID: 740277073}
   m_Layer: 0
   m_Name: GardenArea
   m_TagString: Untagged
@@ -19774,19 +19786,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &740277068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740277067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13e8fdbfbf044584da54e06fb183e647, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 804771682}
 --- !u!65 &740277069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19802,9 +19801,9 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -19873,6 +19872,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &740277073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740277067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f0b10f516e1416488b7167196058a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioComponent: {fileID: 804771680}
 --- !u!1001 &753838562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20469,7 +20481,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e8fdbfbf044584da54e06fb183e647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
 --- !u!82 &804771682
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20485,7 +20496,7 @@ AudioSource:
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -41966,7 +41977,7 @@ GameObject:
   - component: {fileID: 1520366767}
   - component: {fileID: 1520366766}
   - component: {fileID: 1520366765}
-  - component: {fileID: 1520366764}
+  - component: {fileID: 1520366769}
   m_Layer: 0
   m_Name: HouseArea
   m_TagString: Untagged
@@ -41974,19 +41985,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1520366764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520366763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13e8fdbfbf044584da54e06fb183e647, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 200418065}
 --- !u!65 &1520366765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42073,6 +42071,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1520366769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520366763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f0b10f516e1416488b7167196058a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioComponent: {fileID: 200418063}
 --- !u!1 &1525915254 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7816798014093055278, guid: 02ad78cca7f19f843b49a2e580791919,
@@ -46058,6 +46069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696548424635294048, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7696548424635294051, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
