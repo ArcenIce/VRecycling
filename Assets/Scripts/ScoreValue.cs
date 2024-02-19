@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class ScoreValue : MonoBehaviour
 {
@@ -15,7 +15,7 @@ public class ScoreValue : MonoBehaviour
     public GameObject Interactables;
     private int max;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updater
     void Start()
     {
         max = Interactables.transform.childCount;
@@ -29,5 +29,10 @@ public class ScoreValue : MonoBehaviour
         ProgressImage.fillAmount = Progress;
         Valuetext.text = "Score : " + score.ToString();
         ProgressText.text = actuel.ToString() + "/" + max.ToString();
+
+        if (actuel == max)
+        {
+            SceneManager.LoadScene("Fin");
+        }
     }
 }
