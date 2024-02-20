@@ -36,7 +36,6 @@ public class ScoreValue : MonoBehaviour
 
         if (actuel >= max)
         {
-            // SceneManager.LoadScene("Fin");
             sceneLoader.LoadScene("Fin");
         }
     }
