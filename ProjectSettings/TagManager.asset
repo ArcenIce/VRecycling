@@ -9,6 +9,8 @@ TagManager:
   - YellowTrash
   - BlackTrash
   - Compost
+  - LeftController
+  - RightController
   layers:
   - Default
   - TransparentFX

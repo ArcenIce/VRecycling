@@ -55,7 +55,7 @@ public class BlackTrashCanCollision : MonoBehaviour
         }
         else
         {
-            scoreValue.actuel -= 1;
+            scoreValue.actuel += 1;
             main.startColor = Color.red;
             scoreText.text = "-1";
             scoreText.color = Color.red;
