@@ -43,6 +43,7 @@ public class BlackTrashCanCollision : MonoBehaviour
         {
             if (scoreValue != null)
             {
+                scoreValue.actuel += 1;
                 scoreValue.score += 1;
                 
                 main.startColor = Color.green;
@@ -54,6 +55,7 @@ public class BlackTrashCanCollision : MonoBehaviour
         }
         else
         {
+            scoreValue.actuel -= 1;
             main.startColor = Color.red;
             scoreText.text = "-1";
             scoreText.color = Color.red;
@@ -63,6 +65,13 @@ public class BlackTrashCanCollision : MonoBehaviour
         scoreText.enabled = true;
         particle.Play();
         Destroy(collision.gameObject);
+
+
+        // if (actuel >= max)
+        // {
+        //     SceneManager.LoadScene("Fin");
+        //     // Debug.LogWarning($" DEBUGBGUGBUG {actuel}. {max}");
+        // }
 
         // Attendre 1 seconde avant de désactiver le texte
         StartCoroutine(AnimateScoreText());

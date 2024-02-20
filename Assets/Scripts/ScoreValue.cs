@@ -9,7 +9,7 @@ public class ScoreValue : MonoBehaviour
     public Text Valuetext;
 
     // Progress bar
-    private int actuel = 0;
+    public int actuel = 0;
     public Image ProgressImage;
     public Text ProgressText;
     public GameObject Interactables;
@@ -24,7 +24,7 @@ public class ScoreValue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        actuel = max - Interactables.transform.childCount;
+        // actuel = max - Interactables.transform.childCount;
         float Progress = actuel == 0 ? 0 : (float)actuel / (float)max;
         ProgressImage.fillAmount = Progress;
         Valuetext.text = "Score : " + score.ToString();
@@ -33,7 +33,6 @@ public class ScoreValue : MonoBehaviour
         if (actuel >= max)
         {
             SceneManager.LoadScene("Fin");
-            Debug.LogWarning($" DEBUGBGUGBUG {actuel}. {max}");
         }
     }
 }
