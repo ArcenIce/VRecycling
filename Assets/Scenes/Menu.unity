@@ -7486,7 +7486,7 @@ PrefabInstance:
     - target: {fileID: 8503936499194532900, guid: c24a7635b5761984d81cf6c4aac26e0d,
         type: 3}
       propertyPath: m_Text
-      value: 'Loading '
+      value: Loading
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
