@@ -16,6 +16,9 @@ public class ScoreValue : MonoBehaviour
     public GameObject Interactables;
     private int max;
 
+    // Loading de changement de scène
+    public Loadingscreen sceneLoader;
+
     // Start is called before the first frame updater
     void Start()
     {
@@ -33,7 +36,7 @@ public class ScoreValue : MonoBehaviour
 
         if (actuel >= max)
         {
-            SceneManager.LoadScene("Fin");
+            sceneLoader.LoadScene("Fin");
         }
     }
 }

@@ -9,13 +9,17 @@ public class Loadingscreen : MonoBehaviour
     public Image loadingBar;
     public Text loadingText;
 
+    private bool isLoading;
+
     public void LoadScene(string sceneName)
     {
+        if (isLoading) return;
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 
     IEnumerator LoadSceneAsync(string sceneName)
     {
+        isLoading = true;
         loadingModal.SetActive(true);
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
@@ -34,5 +38,6 @@ public class Loadingscreen : MonoBehaviour
 
             yield return null;
         }
+        isLoading = false;
     }
 }
