@@ -30,7 +30,7 @@ public class ScoreValue : MonoBehaviour
         Valuetext.text = "Score : " + score.ToString();
         ProgressText.text = actuel.ToString() + "/" + max.ToString();
 
-        if (actuel == max)
+        if (actuel >= max)
         {
             SceneManager.LoadScene("Fin");
         }
