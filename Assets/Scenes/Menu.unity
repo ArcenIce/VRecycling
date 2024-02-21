@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731716, g: 0.13414738, b: 0.121078566, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -309,7 +309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1da507a3b964267a18e140de309adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingText: {fileID: 0}
 --- !u!114 &254347382 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8503936499194532900, guid: c24a7635b5761984d81cf6c4aac26e0d,
@@ -6341,6 +6340,12 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 2044072824}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1667811853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9014170783705847996, guid: 895f6f3c2d334633b5800312285058d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2044072824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1858712974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7691,6 +7696,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 9032954039820430273, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_RayOriginTransform
+      value: 
+      objectReference: {fileID: 1667811853}
     - target: {fileID: 9146015503685400394, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_RayOriginTransform
